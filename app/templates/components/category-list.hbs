@@ -1,0 +1,16 @@
+{{yield}}
+<main class="main">
+  <div class="main__value main__value--ang">
+    {{angVal}}
+  </div>
+  <div class="main__spacer">
+  </div>
+  <div class="main__value main__value--emb">
+    {{embVal}}
+  </div>
+</main>
+<nav class="nav">
+  {{#each categories as |category|}}
+    <button {{action 'update' category}} class="nav__button nav__button--{{category.color}}">{{category.name}}</button>
+  {{/each}}
+</nav>
